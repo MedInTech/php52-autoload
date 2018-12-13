@@ -1,0 +1,6 @@
+{
+ "chain": [
+    {"type": "Snake",     "base": "/xsrc/MedInTech", "prefix": "MedInTech"},
+    {"type": "Directory", "base": "/xsrc/ShimNative", "recursive": true, "extensions": ["php", "inc"]}
+ ]
+}
