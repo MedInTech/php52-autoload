@@ -20,7 +20,7 @@ class MedInTech_Autoload_Snake extends MedInTech_Autoload_Base implements MedInT
   {
     if (!empty($this->prefix) && !preg_match("/^{$this->prefix}_/i", $className)) {
       // skip classes with wrong prefix
-      return $this->next && $this->next->load($className);
+      return $this->next && $this->next->load($className) ? true : null;
     }
     $class = $this->prefix ?
       preg_replace("/^{$this->prefix}_/i", '', $className) :
