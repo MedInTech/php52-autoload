@@ -15,7 +15,7 @@ class MedInTech_Autoload_Loader implements MedInTech_Autoload_Interface
     if ($rootDir) {
       $this->rootDir = $rootDir;
     } else { // vendor escape
-      $vendorDir = dirname(__FILE__) . '/../../..';
+      $vendorDir = dirname(__FILE__) . '/../../../../..';
       $this->rootDir = realpath("$vendorDir/..");
     }
   }
@@ -40,7 +40,7 @@ class MedInTech_Autoload_Loader implements MedInTech_Autoload_Interface
   protected function build()
   {
     if ($this->autoloader) return $this->autoloader;
-    $chain = $this->rules['chain'];
+    $chain = array_reverse($this->rules['chain']);
     $autoload = null;
     foreach ($chain as $item) {
       $base = !empty($item['base']) ? $item['base'] : '';
