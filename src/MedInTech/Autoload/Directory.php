@@ -1,5 +1,8 @@
 <?php
 
+require_once dirname(__FILE__) . '/Interface.php';
+require_once dirname(__FILE__) . '/Base.php';
+
 class MedInTech_Autoload_Directory extends MedInTech_Autoload_Base implements MedInTech_Autoload_Interface
 {
   protected $directories;

@@ -1,5 +1,10 @@
 <?php
 
+require_once dirname(__FILE__) . '/Interface.php';
+require_once dirname(__FILE__) . '/IPlugin.php';
+require_once dirname(__FILE__) . '/Snake.php';
+require_once dirname(__FILE__) . '/Directory.php';
+
 class MedInTech_Autoload_Loader implements MedInTech_Autoload_Interface
 {
   private $rules;
@@ -10,7 +15,7 @@ class MedInTech_Autoload_Loader implements MedInTech_Autoload_Interface
     if ($rootDir) {
       $this->rootDir = $rootDir;
     } else { // vendor escape
-      $vendorDir = dirname(__DIR__) . '/../../..';
+      $vendorDir = dirname(__FILE__) . '/../../..';
       $this->rootDir = realpath("$vendorDir/..");
     }
   }
