@@ -15,7 +15,7 @@ class MedInTech_Autoload_Loader implements MedInTech_Autoload_Interface
     if ($rootDir) {
       $this->rootDir = $rootDir;
     } else { // vendor escape
-      $vendorDir = dirname(__FILE__) . '/../../../../..';
+      $vendorDir = dirname(__FILE__) . '/../../..';
       $this->rootDir = realpath("$vendorDir/..");
     }
   }
